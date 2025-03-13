@@ -6,16 +6,35 @@
     <title>Custom JuxtaposeJS</title>
     <link rel="stylesheet" href="juxtapose_modified.css">
     <style>
-        /* CSS agar gambar responsif */
-        .juxtapose img {
-            max-width: 100%;
+        /* Menjadikan slider responsif */
+        .juxtapose {
+            max-width: 90vw; /* Maksimal 90% dari lebar layar */
+            max-height: 80vh; /* Maksimal 80% dari tinggi layar */
+            width: auto;
             height: auto;
+            margin: auto;
+        }
+
+        .juxtapose img {
+            width: 100%; /* Agar gambar menyesuaikan ukuran container */
+            height: auto;
+        }
+
+        /* Menengahkan slider */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <h1>Testing Custom JuxtaposeJS</h1>
-    
+
     <!-- Container untuk slider -->
     <div class="juxtapose">
         <img src="before.jpg" data-label="Before" alt="Before">
