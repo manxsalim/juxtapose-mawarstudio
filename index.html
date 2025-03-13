@@ -5,43 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom JuxtaposeJS</title>
     <link rel="stylesheet" href="juxtapose_modified.css">
-    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
-    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
     <style>
-        /* Agar slider responsif */
-        .juxtapose {
-            max-width: 100%;
+        /* CSS agar gambar responsif */
+        .juxtapose img {
+            max-width: auto;
             height: auto;
-        }
-
-        /* Hapus margin bawaan body */
-        body {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #000; /* Bisa diubah sesuai selera */
         }
     </style>
 </head>
 <body>
 
     <!-- Container untuk slider -->
-    <div class="juxtapose" id="juxtapose-container"></div>
+    <div class="juxtapose">
+        <img src="before.jpg" data-label="Before" alt="Before">
+        <img src="after.jpg" data-label="After" alt="After">
+    </div>
 
-    <script>
-        new juxtapose.JXSlider('#juxtapose-container', [
-            {
-                src: "before.jpg",
-                label: "Before"
-            },
-            {
-                src: "after.jpg",
-                label: "After"
-            }
-        ]);
-    </script>
-
+    <script src="juxtapose_modified.js"></script>
 </body>
 </html>
