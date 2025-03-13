@@ -6,16 +6,16 @@
     <title>Custom JuxtaposeJS</title>
     <link rel="stylesheet" href="juxtapose_modified.css">
     <style>
-        /* Membuat container responsif */
-        #juxtapose-container {
-            max-width: 90vw; /* Maksimal 90% dari layar */
-            max-height: 80vh; /* Maksimal 80% dari layar */
+        /* Pastikan slider tidak terlalu besar */
+        .juxtapose {
+            max-width: 90vw;  /* Maksimal 90% dari lebar layar */
+            max-height: 80vh; /* Maksimal 80% dari tinggi layar */
             width: auto;
             height: auto;
             margin: auto;
         }
 
-        /* Menengahkan slider */
+        /* Menengahkan tampilan */
         body {
             display: flex;
             flex-direction: column;
@@ -30,26 +30,12 @@
 <body>
     <h1>Testing Custom JuxtaposeJS</h1>
 
-    <!-- Container untuk slider -->
-    <div id="juxtapose-container"></div>
+    <!-- Container Slider -->
+    <div class="juxtapose">
+        <img src="before.jpg" data-label="Before" alt="Before">
+        <img src="after.jpg" data-label="After" alt="After">
+    </div>
 
     <script src="juxtapose_modified.js"></script>
-    <script>
-        // Menambahkan slider Juxtapose
-        new juxtapose.JXSlider("#juxtapose-container", [
-            {
-                src: "before.jpg",
-                label: "Before"
-            },
-            {
-                src: "after.jpg",
-                label: "After"
-            }
-        ], {
-            animate: true,
-            showLabels: true,
-            showCredits: false
-        });
-    </script>
 </body>
 </html>
