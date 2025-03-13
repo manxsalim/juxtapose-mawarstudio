@@ -5,37 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom JuxtaposeJS</title>
     <link rel="stylesheet" href="juxtapose_modified.css">
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
     <style>
-        /* Pastikan slider tidak terlalu besar */
+        /* Agar slider responsif */
         .juxtapose {
-            max-width: 90vw;  /* Maksimal 90% dari lebar layar */
-            max-height: 80vh; /* Maksimal 80% dari tinggi layar */
-            width: auto;
+            max-width: 100%;
             height: auto;
-            margin: auto;
         }
 
-        /* Menengahkan tampilan */
+        /* Hapus margin bawaan body */
         body {
+            margin: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            text-align: center;
+            height: 100vh;
+            background-color: #000; /* Bisa diubah sesuai selera */
         }
     </style>
 </head>
 <body>
-    <h1>Testing Custom JuxtaposeJS</h1>
 
-    <!-- Container Slider -->
-    <div class="juxtapose">
-        <img src="before.jpg" data-label="Before" alt="Before">
-        <img src="after.jpg" data-label="After" alt="After">
-    </div>
+    <!-- Container untuk slider -->
+    <div class="juxtapose" id="juxtapose-container"></div>
 
-    <script src="juxtapose_modified.js"></script>
+    <script>
+        new juxtapose.JXSlider('#juxtapose-container', [
+            {
+                src: "before.jpg",
+                label: "Before"
+            },
+            {
+                src: "after.jpg",
+                label: "After"
+            }
+        ]);
+    </script>
+
 </body>
 </html>
