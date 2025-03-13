@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juxtapose Embed Example</title>
+    <style>
+        /* Optional styling for the container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Make sure the iframe is responsive */
+        .responsive-iframe-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+        
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Juxtapose Embed Example</h1>
+        
+        <!-- Example 1: Direct embed using iframe to your local instance -->
+        <h2>Example 1: Direct embed to local instance</h2>
+        <div class="responsive-iframe-container">
+            <iframe 
+                frameborder="0" 
+                class="juxtapose" 
+                width="100%" 
+                height="360" 
+                src="embed.html">
+            </iframe>
+        </div>
+
+        <!-- Example 2: Using a hosted version (if you put your files on a server) -->
+        <h2>Example 2: Using a hosted version</h2>
+        <p>Replace "YOUR-SERVER-URL" with the actual URL where you've hosted the files</p>
+        <div class="responsive-iframe-container">
+            <iframe 
+                frameborder="0" 
+                class="juxtapose" 
+                width="100%" 
+                height="360" 
+                src="https://YOUR-SERVER-URL/embed.html">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html> 

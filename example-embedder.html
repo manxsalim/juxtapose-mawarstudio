@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juxtapose Embedder Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+        
+        code {
+            background: #f5f5f5;
+            padding: 3px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        .juxtapose-embed {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Juxtapose Embedder Example</h1>
+        <p>This page demonstrates how to use the <code>embedder.js</code> script to embed juxtapose sliders on any website.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic Example</h2>
+        <p>This is the simplest way to embed a juxtapose slider:</p>
+        
+        <pre><code>&lt;div class="juxtapose-embed" 
+     data-before="before.jpg" 
+     data-after="after.jpg"
+     data-before-label="Before" 
+     data-after-label="After"&gt;&lt;/div&gt;</code></pre>
+        
+        <div class="juxtapose-embed" 
+             data-before="before.jpg" 
+             data-after="after.jpg"
+             data-before-label="Before" 
+             data-after-label="After"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Custom Size Example</h2>
+        <p>You can customize the size of your slider:</p>
+        
+        <pre><code>&lt;div class="juxtapose-embed" 
+     data-before="before.jpg" 
+     data-after="after.jpg"
+     data-before-label="Original" 
+     data-after-label="Modified"
+     data-width="800px"
+     data-height="450px"&gt;&lt;/div&gt;</code></pre>
+        
+        <div class="juxtapose-embed" 
+             data-before="before.jpg" 
+             data-after="after.jpg"
+             data-before-label="Original" 
+             data-after-label="Modified"
+             data-width="800px"
+             data-height="450px"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Full Remote Example</h2>
+        <p>You can also use images hosted elsewhere:</p>
+        
+        <pre><code>&lt;div class="juxtapose-embed" 
+     data-before="https://example.com/path/to/before.jpg" 
+     data-after="https://example.com/path/to/after.jpg"
+     data-before-label="Before" 
+     data-after-label="After"&gt;&lt;/div&gt;</code></pre>
+        
+        <!-- Note: these URLs need to be replaced with actual valid image URLs -->
+        <p>Note: For this to work, you need to replace the URLs with valid image URLs.</p>
+    </div>
+    
+    <!-- Load the embedder script -->
+    <script src="embedder.js"></script>
+</body>
+</html> 
